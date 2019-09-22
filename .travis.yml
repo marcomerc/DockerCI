@@ -2,13 +2,14 @@ sudo: required
 services: 
   - docker
 script:
-  - docker build -t mannydesigns/node .
-  - docker images mannydesigns/node
+  - docker build -t nanocar1926/node .
+  - docker images nanocar1926/node
 
 before_deploy:
   - docker login -u <nanocar1926> -p <mercado1926>
-# deploy:
-#   provider: script
-#   script: docker push mannydesigns/node
-#   on:
-#     branch: master
+
+  deploy:
+  provider: script
+  script: docker push nanocar1926/node
+  on:
+    branch: master
