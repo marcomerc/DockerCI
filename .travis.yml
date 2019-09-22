@@ -6,7 +6,7 @@ script:
   - docker images mannydesigns/node
 
 before_deploy:
-  - docker login -u "nanocar1926" -p "mercado1926"
+  - docker login -u "nanocar1926" -p "mercado1926" 
 deploy:
   provider: script
   script: docker push mannydesigns/node
