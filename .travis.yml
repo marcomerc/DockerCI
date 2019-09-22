@@ -5,10 +5,10 @@ script:
   - docker build -t mannydesigns/node .
   - docker images mannydesigns/node
 
-# before_deploy:
-#   - docker login -u nanocar1926 -p mercado1926
-# deploy:
-#   provider: script
-#   scripts: docker push mannydesigns/node
-#   on:
-#     branch: master
+before_deploy:
+  - docker login -u nanocar1926 -p mercado1926
+deploy:
+  provider: script
+  script: docker push mannydesigns/node
+  on:
+    branch: master
