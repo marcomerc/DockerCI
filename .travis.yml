@@ -7,8 +7,8 @@ script:
 
 before_deploy:
   - docker login -u <nanocar1926> -p <mercado1926>
-deploy:
-  provider: script
-  script: docker push mannydesigns/node
-  on:
-    branch: master
+# deploy:
+#   provider: script
+#   script: docker push mannydesigns/node
+#   on:
+#     branch: master
