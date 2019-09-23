@@ -6,7 +6,7 @@ script:
   - docker images nanoar1926/DockerCI
 
 before_deploy:
-  - docker login -u <nanocar1926> -p <mercado1926>
+  - docker login -u "nanocar1926" -p "mercado1926"
 deploy:
   provider: script
   script: docker push nanocar1926/DockerCI
